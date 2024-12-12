@@ -1,0 +1,147 @@
+[
+{
+    "model": "examenCRUD.usuario",
+    "pk": 1,
+    "fields": {
+        "nombre": "Far wonder picture foreign authority specific long free.",
+        "edad": 10576
+    }
+},
+{
+    "model": "examenCRUD.usuario",
+    "pk": 2,
+    "fields": {
+        "nombre": "Tax Congress whether easy hundred. Mother their eight section manager act course role.",
+        "edad": 27954
+    }
+},
+{
+    "model": "examenCRUD.usuario",
+    "pk": 3,
+    "fields": {
+        "nombre": "Newspaper fill after page any. Full collection bill throw traditional. Present gun author turn.",
+        "edad": 30146
+    }
+},
+{
+    "model": "examenCRUD.usuario",
+    "pk": 4,
+    "fields": {
+        "nombre": "Piece major program. Event computer door face travel. Without glass majority during seem.",
+        "edad": 19968
+    }
+},
+{
+    "model": "examenCRUD.usuario",
+    "pk": 5,
+    "fields": {
+        "nombre": "Call during major. Chance front can officer beat bed art. The one race result.",
+        "edad": 21669
+    }
+},
+{
+    "model": "examenCRUD.producto",
+    "pk": 1,
+    "fields": {
+        "nombre": "Employee left buy want rest right. Player arrive scientist different her policy.",
+        "puede_tener_promociones": false
+    }
+},
+{
+    "model": "examenCRUD.producto",
+    "pk": 2,
+    "fields": {
+        "nombre": "Summer occur charge everyone think firm cut. Recently to safe among alone reveal.",
+        "puede_tener_promociones": true
+    }
+},
+{
+    "model": "examenCRUD.producto",
+    "pk": 3,
+    "fields": {
+        "nombre": "Oil watch bar. Treatment stop then tend. Reach ground those.",
+        "puede_tener_promociones": false
+    }
+},
+{
+    "model": "examenCRUD.producto",
+    "pk": 4,
+    "fields": {
+        "nombre": "Senior pretty anything present nature last sing.",
+        "puede_tener_promociones": false
+    }
+},
+{
+    "model": "examenCRUD.producto",
+    "pk": 5,
+    "fields": {
+        "nombre": "Offer these ever enter daughter. Pass reach have green camera campaign.",
+        "puede_tener_promociones": true
+    }
+},
+{
+    "model": "examenCRUD.promocion",
+    "pk": 1,
+    "fields": {
+        "nombre": "Medical take strong figure seek collection.",
+        "descripcion": "Deal discover attack really process your. Leader evening relationship reduce bit assume huge. Inside talk serve message million win second.",
+        "producto": 4,
+        "usuario": 1,
+        "descuento": -24411,
+        "fecha_inicio": "1976-07-28",
+        "fecha_fin": "2007-05-15"
+    }
+},
+{
+    "model": "examenCRUD.promocion",
+    "pk": 2,
+    "fields": {
+        "nombre": "Likely tax our simply her item media.\nPut instead gas quality tree fast among.",
+        "descripcion": "Price interview into environmental goal film sea stuff. Issue family human break Mr above oil. Sea as town both.\nVisit reality standard eye method. Rest matter opportunity city.",
+        "producto": 4,
+        "usuario": 4,
+        "descuento": 4914,
+        "fecha_inicio": "1975-04-13",
+        "fecha_fin": "2003-07-22"
+    }
+},
+{
+    "model": "examenCRUD.promocion",
+    "pk": 3,
+    "fields": {
+        "nombre": "Yeah American discussion value painting whom save east. Option nice another building.",
+        "descripcion": "Tv including involve just simply sing. Boy fight consider understand.\nLate inside direction TV.\nLike heart child step do security place. Really southern building arrive man.",
+        "producto": 1,
+        "usuario": 4,
+        "descuento": 25389,
+        "fecha_inicio": "1993-01-29",
+        "fecha_fin": "1988-01-22"
+    }
+},
+{
+    "model": "examenCRUD.promocion",
+    "pk": 4,
+    "fields": {
+        "nombre": "Spend various data. Third explain industry.",
+        "descripcion": "With back mind write call investment. Cause hour own board into. Voice school particularly through good southern.\nThink western itself many. Film or seat side first inside music.",
+        "producto": 2,
+        "usuario": 3,
+        "descuento": -32078,
+        "fecha_inicio": "1987-08-31",
+        "fecha_fin": "1970-09-09"
+    }
+},
+{
+    "model": "examenCRUD.promocion",
+    "pk": 5,
+    "fields": {
+        "nombre": "Job fact attention. Cup throughout look late executive.",
+        "descripcion": "Moment hard mention. Such spend claim worry more.\nUpon reveal family ten provide style. Service finish staff serious. Southern fill use career.",
+        "producto": 5,
+        "usuario": 5,
+        "descuento": -7154,
+        "fecha_inicio": "2008-04-09",
+        "fecha_fin": "1987-08-16"
+    }
+}
+]

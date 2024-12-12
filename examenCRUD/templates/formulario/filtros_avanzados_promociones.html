@@ -1,0 +1,106 @@
+{% extends "Padre.html" %}
+
+{% block cabecera %}
+<h1 class="text-center text-primary my-4">Búsqueda Avanzada de Promociones</h1>
+<p class="text-center text-secondary">Filtros de búsqueda</p>
+{% endblock %}
+
+{% block contenido %}
+<div class="card shadow p-4">
+    <h2 class="text-secondary mb-4">Filtros de búsqueda</h2>
+    <form method="GET" class="mb-4">
+        {{ formulario.nombre.label_tag }}
+        {{ formulario.nombre }}
+        {% for error in formulario.nombre.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        {{ formulario.descripcion.label_tag }}
+        {{ formulario.descripcion }}
+        {% for error in formulario.descripcion.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        {{ formulario.fecha_fin_inicio.label_tag }}
+        {{ formulario.fecha_fin_inicio }}
+        {% for error in formulario.fecha_fin_inicio.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        {{ formulario.fecha_fin_final.label_tag }}
+        {{ formulario.fecha_fin_final }}
+        {% for error in formulario.fecha_fin_final.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        {{ formulario.descuento.label_tag }}
+        {{ formulario.descuento }}
+        {% for error in formulario.descuento.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        {{ formulario.usuario.label_tag }}
+        {{ formulario.usuario }}
+        {% for error in formulario.usuario.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        {{ formulario.producto.label_tag }}
+        {{ formulario.producto }}
+        {% for error in formulario.producto.errors %}
+            <div class="text-danger"><small>{{ error }}</small></div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary w-100">Buscar</button>
+    </form>
+</div>
+
+<hr>
+
+<h2 class="text-center text-secondary my-4">Resultados de búsqueda</h2>
+
+<div class="row">
+    {% if promociones %}
+        {% for promocion in promociones %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ promocion.nombre|truncatewords:5 }}</h5>
+                    <p class="card-text">
+                        <strong>Descripcion:</strong> {{ promocion.descripcion|truncatewords:10 }}<br>
+                        <strong>Fecha fin de inicio:</strong> {{ promocion.fecha_fin_inicio|date:"d \d\e F \d\e Y" }}<br>
+                        <strong>Fecha fin:</strong> {{ promocion.fecha_fin_final|date:"d \d\e F \d\e Y" }}
+                        <strong>Descuento:</strong> {{ promocion.descuento }}<br>
+                        <strong>Usuario:</strong> {{ promocion.usuario }}<br>
+                        <strong>Producto:</strong> {{ promocion.producto }}<br>
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    {% load bootstrap_icons %}
+                    <div class="row btn-group">
+                        <div class="mb-2">
+                            <button type="button" 
+                                    class="btn btn-outline-primary"> 
+                                    <a href="{% url 'promocion_modificar' promocion.id %}" ><span>{% bs_icon 'pencil' %}</span></a>
+                            </button>
+                        </div>
+                        <div class="mb-2">
+                            <form action = "{% url 'eliminar_promocion' promocion.id %}" method = "post"> 
+                                {% csrf_token %}
+                                <button class="btn btn-danger" onclick="return eliminar();" type="submit">
+                                    <span>{% bs_icon 'trash' %}</span>
+                                </button> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="col-12">
+            <p class="text-center text-danger">No se encontraron resultados.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
